@@ -1,12 +1,10 @@
 import csv
 import os
+import file
 
 def get_id():
-    if os.path.isfile('notes.csv') == False:
-        file = open('notes.csv','w')
-        file.close
-        print('Отсутстует файл заметок. Создан новый')
-    
+    file.exist_file()
+
     if os.stat('notes.csv').st_size == 0:
         next_id = 1
     else:
