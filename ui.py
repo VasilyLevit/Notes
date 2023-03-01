@@ -26,7 +26,7 @@ def get_data():
     note_entry.append(input('Введите название заметки: '))
 
     # get note's text
-    # note_entry.append(input('Введите текст заметки: '))
+    note_entry.append(input('Введите текст заметки: '))
     
     return note_entry
 

@@ -22,8 +22,8 @@ def button_click():
                 delete.del_note(ui.get_find_string())
                 ui.info_del_note()
             elif operation !='q':
-                print("Ошибка ввода. Введите число от 1 до 6")
+                print("Ошибка ввода. Введите правильную команду")
             else:
                 operation = 'q'
         except:
-            print("Ошибка ввода. Введите число от 1 до 6")
+            print("Ошибка ввода. Введите команду из списка")

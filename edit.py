@@ -1,13 +1,10 @@
 import csv
 import ui
-import os
+import file
 
 def edit_data(find_str):
-    # проверка наличия файла с заметками
-    if os.path.isfile('notes.csv') == False:
-        file = open('notes.csv','w')
-        file.close
-        print('Отсутствует файл заметок. Создан новый')
+
+    file.exist_file()
     
     with open('notes.csv', "r", newline = '') as data:
         reader = csv.reader(data, delimiter = ';')

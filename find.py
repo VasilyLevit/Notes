@@ -1,6 +1,8 @@
 import csv
-# добавить проверку на наличе файла данных
+import file
+
 def find_data(find_str):
+    file.exist_file()
     with open('notes.csv', "r") as data:
         reader = csv.reader(data, delimiter = ';')
         result = []
