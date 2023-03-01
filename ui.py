@@ -2,12 +2,12 @@ import id_note
 import datetime
 
 def get_comand():
-    print('\n - Список команд')
+    print('\n ** Список команд **')
     print('1 - добавить заметку')
     print('2 - показать заметки')
     print('3 - найти заметку')
     print('4 - редактировать заметку')
-    # print('5 - удалить заметку')
+    print('5 - удалить заметку')
     print('q - выход из программы')
 
     return input('Введите команду: ')
@@ -43,11 +43,18 @@ def get_edit_data(find_str):
   
     return note_entry
 
+def get_del_note():
+    return input('Введите номер заметки для удаления: ')
+
+def get_find_string():
+    return input('Введите номер для поиска: ') # поиск по номеру. сделать поиск по другим полям
+
+def info_del_note():
+    print('Заметка удалена')
+
 def print_data(data):
-    # print(data)
+    
     for i in data:
         for j in i:
             print(j)
 
-def get_find_string():
-    return input('Введите номер для поиска: ') # поиск по номеру. сделать поиск по другим полям

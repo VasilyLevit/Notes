@@ -3,6 +3,7 @@ import save_note
 import show_notes
 import find
 import edit
+import delete
 
 def button_click():
     operation = 0
@@ -17,9 +18,9 @@ def button_click():
                 ui.print_data(find.find_data(ui.get_find_string()))
             elif operation == '4':
                 ui.print_data(edit.edit_data(ui.get_find_string()))
-        #     elif operation == 5:
-        #         delite_note.del_data(ui.get_find_string())
-        #         ui.rez_del_note()
+            elif operation == '5':
+                delete.del_note(ui.get_find_string())
+                ui.info_del_note()
             else:
                 operation = 'q'
         except:
