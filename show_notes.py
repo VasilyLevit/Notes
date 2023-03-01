@@ -6,7 +6,7 @@ def show_data():
     if os.path.isfile('notes.csv') == False:
         file = open('notes.csv','w')
         file.close
-        print('Отсутстует файл заметот. Создан новый')
+        print('Отсутствует файл заметок. Создан новый')
     with open('notes.csv', "r") as data:
         reader = csv.reader(data, delimiter = ';')
         result_all = []

@@ -6,9 +6,11 @@ def get_comand():
     print('1 - добавить заметку')
     print('2 - показать заметки')
     print('3 - найти заметку')
+    print('4 - редактировать заметку')
+    # print('5 - удалить заметку')
     print('q - выход из программы')
 
-    return input('Введите номер операции: ')
+    return input('Введите команду: ')
 
 def get_data():
     note_entry = []
@@ -21,11 +23,24 @@ def get_data():
     note_entry.append(now.strftime("%d-%m-%Y %H:%M"))
     
     # get note's head
-    note_entry.append(input('Введите номер заметки: '))
+    note_entry.append(input('Введите название заметки: '))
 
     # get note's text
     # note_entry.append(input('Введите текст заметки: '))
     
+    return note_entry
+
+def get_edit_data(find_str):
+    now = datetime.datetime.now()
+    note_entry = []
+    
+    # присвоения id редактируемой заметки
+    note_entry.append(find_str)
+    
+    note_entry.append(now.strftime("%d-%m-%Y %H:%M"))
+    note_entry.append(input('Введите новый заголовок заметки: '))
+    # note_entry.append(input('Введите новый текст заметки: '))
+  
     return note_entry
 
 def print_data(data):
@@ -35,4 +50,4 @@ def print_data(data):
             print(j)
 
 def get_find_string():
-    return input('Введите слово для поиска: ') # поиск по номеру. сделать поиск по другим полям
+    return input('Введите номер для поиска: ') # поиск по номеру. сделать поиск по другим полям
