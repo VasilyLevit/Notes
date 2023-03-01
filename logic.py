@@ -1,7 +1,7 @@
 import ui
 import save_note
 import show_notes
-# import book_find as bf
+import find
 
 def button_click():
     operation = 0
@@ -13,8 +13,8 @@ def button_click():
         elif operation == '2':
             ui.print_data(show_notes.show_data())          
              
-        # elif operation == '3':
-        #     ui.print_data(bf.find_data(ui.get_find_string()))
+        elif operation == '3':
+            ui.print_data(find.find_data(ui.get_find_string()))
                    
         else:
             operation = 'q'
