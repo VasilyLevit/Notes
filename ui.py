@@ -13,7 +13,7 @@ def get_data():
     note_entry = []
 
     # get id
-    # note_entry.append(id_note.get_id())
+    note_entry.append(id_note.get_id())
     
     # get time note
     now = datetime.datetime.now()  
